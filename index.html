@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Abdoul's Portofolio | 2023</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/cb88570701.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header">
@@ -14,7 +15,7 @@
                 <img src="img/logo.jpg" alt="abdoulPortofolio" class="logo">
                 <ul>
                     <li><a href="#">Accueil</a></li>
-                    <li><a href="#">Apropos</a></li>
+                    <li><a href="#about">Apropos </a></li>
                     <li><a href="#">Services</a></li>
                     <li><a href="#">Portofolio</a></li>
                     <li><a href="#">Contact</a></li>
@@ -27,5 +28,131 @@
             </div>
         </div>
     </div>
+    <!----- apropos de moi------->
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="img/5.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">Apropos de moi</h1>
+                    <p>une description de ma personalite et de mes centre d'interet</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Competences</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experiences</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>UI/UX</span><br>Concevoir et prototype les interfaces des application et site web </li>
+                            <li><span>Developpement Web</span><br>Concevoir et prototype les interfaces des application et site web </li>
+                            <li><span>Developpement d'application mobile</span><br>Concevoir et prototype les interfaces des application et site web </li>
+                            <li><span>Pentest</span><br>Concevoir et prototype les interfaces des application et site web </li>
+                            <li><span>Maintenance informatique</span><br>Concevoir et prototype les interfaces des application et site web </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>UI/UX</span><br>Concevoir et prototype les interfaces des application et site web </li>
+                            <li><span>Developpement Web</span><br>Concevoir et prototype les interfaces des application et site web </li>
+                            <li><span>Developpement d'application mobile</span><br>Concevoir et prototype les interfaces des application et site web </li>
+                            <li><span>Pentest</span><br>Concevoir et prototype les interfaces des application et site web </li>
+                            <li><span>Maintenance informatique</span><br>Concevoir et prototype les interfaces des application et site web </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>UI?UX</span><br>Concevoir et prototype les interfaces des application et site web </li>
+                            <li><span>Developpement Web</span><br>Concevoir et prototype les interfaces des application et site web </li>
+                            <li><span>Developpement d'application mobile</span><br>Concevoir et prototype les interfaces des application et site web </li>
+                            <li><span>Pentest</span><br>Concevoir et prototype les interfaces des application et site web </li>
+                            <li><span>Maintenance informatique</span><br>Concevoir et prototype les interfaces des application et site web </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!----services -->
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">Mes Services</h1>
+            <div class="services-list">
+                <div>
+                    <i class="fa-light fa-pencil"></i>
+                    <h2>Web/App Design</h2>
+                    <p> description job</p>
+                </div>
+
+                <div>
+                    <i class="fa-solid fa-laptop-code"></i>
+                    <h2>Web/App Design</h2>
+                    <p> description job</p>
+                </div>
+
+                <div>
+                    <h2>Web/App Design</h2>
+                    <p> description job</p>
+                </div>
+
+                <div>
+                    <h2>Web/App Design</h2>
+                    <p> description job</p>
+                </div>
+
+                <div>
+                    <h2>Web/App Design</h2>
+                    <p> description job</p>
+                </div>
+
+                <div>
+                    <h2>Web/App Design</h2>
+                    <p> description job</p>
+                </div>
+
+                <div>
+                    <h2>Web/App Design</h2>
+                    <p> description job</p>
+                </div>
+
+                <div>
+                    <h2>Web/App Design</h2>
+                    <p> description job</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!----portofolio-->
+
+    <div id="portofolio">
+        <div class="container">
+            <h1 class="sub-title"> Portofolio</h1>
+        </div>
+    </div>
+
+    <script>
+        var tablinks = document.getElementsByClassName("tab-links");
+        var tabcontents = document.getElementsByClassName("tab-contents");
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab")
+        }
+    </script>
 </body>
 </html>
